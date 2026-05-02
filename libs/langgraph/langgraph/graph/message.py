@@ -33,7 +33,12 @@ __all__ = (
     "REMOVE_ALL_MESSAGES",
 )
 
-Messages = list[MessageLikeRepresentation] | MessageLikeRepresentation
+Messages = (
+    list[MessageLikeRepresentation]
+    | MessageLikeRepresentation
+    | list[BaseMessage]
+    | BaseMessage
+)
 
 REMOVE_ALL_MESSAGES = "__remove_all__"
 
